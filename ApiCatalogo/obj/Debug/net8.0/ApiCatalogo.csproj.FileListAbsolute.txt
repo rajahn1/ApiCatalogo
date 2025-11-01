@@ -19,12 +19,6 @@ C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\scopedcss\b
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets\msbuild.ApiCatalogo.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets\msbuild.ApiCatalogo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets\msbuild.build.ApiCatalogo.props
-C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ApiCatalogo.props
-C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ApiCatalogo.props
-C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatal.B2456931.Up2Date
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.dll
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\refint\ApiCatalogo.dll
@@ -111,3 +105,10 @@ C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\zh-Hans\Mic
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\bin\Debug\net8.0\appsettings.json
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\ApiCatalogo.sourcelink.json
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\rjahn\source\repos\ApiCatalogo\ApiCatalogo\obj\Debug\net8.0\staticwebassets.build.json.cache

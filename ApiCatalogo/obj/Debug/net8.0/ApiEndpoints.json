@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "ApiCatalogo.Api.Controllers.CategoriesController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/v1/Categories",
     "HttpMethod": "GET",
     "IsController": true,

@@ -3,16 +3,12 @@ using ApiCatalogo.Domain.Entities;
 using ApiCatalogo.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace ApiCatalogo.Infrastructure.Repositories;
 
-public class CategoryRepository : ICategoryRepository
+public class CategoryRepository(AppDbContext context) : ICategoryRepository
 {
-  private readonly AppDbContext _context;
-
-  public CategoryRepository(AppDbContext context)
-  {
-    _context = context;
-  }
+  private readonly AppDbContext _context = context;
 
   public async Task<IEnumerable<Category>> GetAll()
   {
@@ -23,4 +19,14 @@ public class CategoryRepository : ICategoryRepository
   {
     return await _context.Categories.FindAsync(id);
   }
+
+    public async Task AddAsync(Category category)
+    {
+        await _context.Categories.AddAsync(category);
+    }
+
+    public async Task SaveChangesAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
 }

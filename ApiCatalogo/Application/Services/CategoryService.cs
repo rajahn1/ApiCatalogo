@@ -1,6 +1,9 @@
-﻿namespace ApiCatalogo.Application.Services
+﻿using ApiCatalogo.Domain.Interfaces;
+
+namespace ApiCatalogo.Application.Services
 {
-    public class CategoryService
+    public class CategoryService : ICategoryRepository
     {
+
     }
 }
