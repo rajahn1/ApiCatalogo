@@ -32,4 +32,11 @@ public class ProductsController : ControllerBase
 
         return Ok(product);
     }
+
+    [HttpPost("")]
+    public async Task<ActionResult<Product>> Post(Product product)
+    {
+        
+    }
 }
+

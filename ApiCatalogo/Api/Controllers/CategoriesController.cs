@@ -1,19 +1,25 @@
-﻿using ApiCatalogo.Domain.Entities;
+﻿using ApiCatalogo.Application.Interfaces;
+using ApiCatalogo.Domain.Entities;
+using ApiCatalogo.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ApiCatalogo.Api.Controllers
 {
+
+    
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class CategoriesController : ControllerBase
+    public class CategoriesController(ICategoryService categoryService) : ControllerBase
     {
+        private readonly ICategoryService _categoryService = categoryService;
         // GET: api/<CategoriesController>
         [HttpGet]
-        public IEnumerable<Category> GetAll()
+        public async Task<ActionResult<IEnumerable<Category>>> GetAll()
         {
-            return null;
+            var categories = await _categoryService.GetAll();
+            return Ok(categories);
         }
 
         // GET api/<CategoriesController>/5
