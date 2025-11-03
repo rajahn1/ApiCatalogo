@@ -28,15 +28,19 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "category",
+        "Type": "ApiCatalogo.Domain.Entities.Category",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "ApiCatalogo.Domain.Entities.Category",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
         "StatusCode": 200
       }
     ]
@@ -57,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "ApiCatalogo.Domain.Entities.Category",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -65,7 +69,8 @@
         ],
         "StatusCode": 200
       }
-    ]
+    ],
+    "EndpointName": "ObterCategoria"
   },
   {
     "ContainingType": "ApiCatalogo.Api.Controllers.CategoriesController",
@@ -138,6 +143,32 @@
   },
   {
     "ContainingType": "ApiCatalogo.Api.Controllers.ProductsController",
+    "Method": "Post",
+    "RelativePath": "api/v1/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "ApiCatalogo.Domain.Entities.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApiCatalogo.Domain.Entities.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiCatalogo.Api.Controllers.ProductsController",
     "Method": "GetById",
     "RelativePath": "api/v1/Products/{id}",
     "HttpMethod": "GET",
@@ -160,6 +191,7 @@
         ],
         "StatusCode": 200
       }
-    ]
+    ],
+    "EndpointName": "ObterProduto"
   }
 ]

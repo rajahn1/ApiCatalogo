@@ -1,6 +1,7 @@
 ﻿using ApiCatalogo.Application.Interfaces;
 using ApiCatalogo.Domain.Entities;
 using ApiCatalogo.Domain.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace ApiCatalogo.Application.Services
 {

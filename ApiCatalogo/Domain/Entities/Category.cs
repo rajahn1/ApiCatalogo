@@ -9,7 +9,7 @@ public class Category
 {
     public Category()
     {
-        Products = new Collection<Product>();
+        Products = [];
     }
 
     [Key]

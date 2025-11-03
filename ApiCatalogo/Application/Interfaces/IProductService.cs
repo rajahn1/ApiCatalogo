@@ -6,5 +6,8 @@ namespace ApiCatalogo.Application.Interfaces
     {
         Task<IEnumerable<Product>> GetAll();
         Task<Product> GetById(int id);
+
+        Task AddAsync(Product product);
+        Task SaveChangesAsync(); 
     }
 }

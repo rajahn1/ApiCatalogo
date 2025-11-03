@@ -1,16 +1,17 @@
 ﻿using ApiCatalogo.Application.Interfaces;
 using ApiCatalogo.Domain.Interfaces;
 using ApiCatalogo.Domain.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace ApiCatalogo.Application.Services
 {
-    public class ProductService : IProductService
+    public class ProductService(IProductRepository productRepository) : IProductService
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductRepository _productRepository = productRepository;
 
-        public ProductService(IProductRepository productRepository)
+        public async Task AddAsync(Product product)
         {
-            _productRepository = productRepository;
+            await _productRepository.AddAsync(product);
         }
 
         public async Task<IEnumerable<Product>> GetAll()
@@ -22,10 +23,13 @@ namespace ApiCatalogo.Application.Services
         public async Task<Product> GetById(int id)
         {
             var product = await _productRepository.GetById(id);
-
-            if (product == null) return null;
-
             return product;
         }
+
+        public async Task SaveChangesAsync()
+        {
+            await _productRepository.SaveChangesAsync();
+        }
+        
     }
 }

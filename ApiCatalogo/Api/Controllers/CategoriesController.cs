@@ -2,13 +2,12 @@
 using ApiCatalogo.Domain.Entities;
 using ApiCatalogo.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ApiCatalogo.Api.Controllers
 {
-
-    
     [Route("api/v1/[controller]")]
     [ApiController]
     public class CategoriesController(ICategoryService categoryService) : ControllerBase
@@ -19,20 +18,29 @@ namespace ApiCatalogo.Api.Controllers
         public async Task<ActionResult<IEnumerable<Category>>> GetAll()
         {
             var categories = await _categoryService.GetAll();
+            if (categories == null) { 
+                return NotFound();
+            }
             return Ok(categories);
         }
 
         // GET api/<CategoriesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}", Name="ObterCategoria")]
+        public async Task<ActionResult<Category>> Get(int id)
         {
-            return "value";
+            var category = await _categoryService.GetById(id);
+            if (category == null) return NotFound();
+           return Ok(category);
         }
 
         // POST api/<CategoriesController>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task<ActionResult<Category>> Post(Category category)
         {
+            if (category is null) return BadRequest();
+            await _categoryService.AddAsync(category);
+            await _categoryService.SaveChangesAsync();
+            return new CreatedAtRouteResult("ObterCategoria", new { id = category.Id });
         }
 
         // PUT api/<CategoriesController>/5
